@@ -4,51 +4,59 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Registration Form</title>
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<header>
-		<h1>Don't have an Account? Register now!</h1>
-	</header>
-	<section>
-		<span>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum lacus at sem finibus congue id sit amet mi. Mauris blandit vitae ligula sed ultricies. Ut facilisis imperdiet mauris ac hendrerit. Suspendisse bibendum tristique diam.
-		</span>
-	</section>
-	<br>
-	<article>
-		<form action="/register" method="post">
-			<label for="firstname">First name:</label><br>
-			<input type="text" name="firstname" id="firstname" required />
-			<br>
-			<label for="lastname">Last name:</label><br>
-			<input type="text" name="lastname" id="lastname" required />
-			<br>
-			<label for="email">Email address:</label><br>
-			<input type="email" name="email" id="email" required />
-			<br>
-			<label for="username">Choose a username:</label><br>
-			<input type="text" name="username" id="username" required  />
-			<br>
-			<label for="phone">Phone:</label><br>
-			<input type="tel" name="phone" id="phone" required />
-			<br>
-			<label for="country">Country:</label><br>
-			<input type="text" name="country" id="country" required />
-			<br>
-			<label for="password">Choose password:</label><br>
-			<input type="password" name="password" id="password" required />
-			<br>
-			<label for="confirm-password">Re-enter password:</label><br>
-			<input type="password" name="confirmpassword" id="confirm-password" required />
-			<br><br>
-			<button>Register now</button>
-		</form>
-	</article>
-	<br>
-	<footer>
-		<span>Copyright 2020.</span>
-	</footer>
+	<div class="container">
+		<header>
+			<h1>Don't have an Account? Register now!</h1>
+		</header>
+		<section>
+			<span>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum lacus at sem finibus congue id sit amet mi. Mauris blandit vitae ligula sed ultricies. Ut facilisis imperdiet mauris ac hendrerit. Suspendisse bibendum tristique diam.
+			</span>
+		</section>
+		<br>
+		<article>
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				Please input required values!
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<form action="#" method="post" id="register-form">
+				<label for="firstname">First name:</label><br>
+				<input type="text" name="firstname" id="firstname" required />
+				<br>
+				<label for="lastname">Last name:</label><br>
+				<input type="text" name="lastname" id="lastname" required />
+				<br>
+				<label for="email">Email address:</label><br>
+				<input type="email" name="email" id="email" required />
+				<br>
+				<label for="username">Choose a username:</label><br>
+				<input type="text" name="username" id="username" required  />
+				<br>
+				<label for="password">Choose password:</label><br>
+				<input type="password" name="password" id="password" required />
+				<br>
+				<label for="confirm-password">Re-enter password:</label><br>
+				<input type="password" name="confirmpassword" id="confirm-password" required />
+				<br><br>
+				<button id="register-button">Register now</button>
+			</form>
+		</article>
+		<br>
+		<footer>
+			<span>Copyright 2020.</span>
+		</footer>
+	</div>
 	
+	<!-- JavaScript Modules -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
