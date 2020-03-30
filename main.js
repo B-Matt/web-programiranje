@@ -23,7 +23,7 @@ $(document).ready(function(){
 		} else {
 			$.ajax({
 				type: 'POST',
-				url: 'form.php',
+				url: 'backend/form.php',
 				data: { inputs: JSON.stringify($("form#register-form").serializeArray()) },
 				success: function() {
 					$('.registration-successful').show();
