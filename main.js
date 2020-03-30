@@ -21,17 +21,17 @@ $(document).ready(function(){
 		if(isEmpty) {
 			$('.registration-alert').show();
 		} else {
-			$('.registration-successful').show();
-
 			$.ajax({
 				type: 'POST',
 				url: 'form.php',
 				data: { inputs: JSON.stringify($("form#register-form").serializeArray()) },
-				success: function(data) {
-					console.log(data);
+				success: function() {
+					$('.registration-successful').show();
 				},
 				error: function(data) {
-					console.log(data);
+					if(data.status == 403) {
+						$('.registration-alert').html("Given user is already in our database!<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>").show();
+					}
 				}
 			});
 		}
